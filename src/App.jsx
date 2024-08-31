@@ -65,7 +65,7 @@ function App() {
     dispatch({
       type: "UPDATE",
       data: {
-        id: idRef.current++,
+        id,
         createdDate,
         emotionId,
         content,
