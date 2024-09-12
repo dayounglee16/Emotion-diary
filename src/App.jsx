@@ -37,6 +37,8 @@ const reducer = (state, action) => {
       );
     case "DELETE":
       return state.filter((item) => String(item.id) !== String(action.data.id));
+    default:
+      return state;
   }
 };
 
@@ -45,7 +47,7 @@ export const DiaryDispatchContext = createContext();
 
 function App() {
   const [data, dispatch] = useReducer(reducer, mockData);
-  const idRef = useRef(3);
+  const idRef = useRef(0);
 
   //새로운 일기 추가
   const onCreate = (createdDate, emotionId, content) => {
@@ -77,11 +79,10 @@ function App() {
   const onDelete = (id) => {
     dispatch({
       type: "DELETE",
-      data: {
-        id,
-      },
+      id,
     });
   };
+
   return (
     <>
       <DiaryStateContext.Provider value={data}>

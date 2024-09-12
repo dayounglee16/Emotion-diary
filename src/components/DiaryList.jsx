@@ -28,12 +28,12 @@ const DiaryList = ({ data }) => {
     <div className="DiaryList">
       <div className="menu_bar">
         <select onChange={onChangeSortType}>
-          <option value={"latest"}>최신순</option>
-          <option value={"oldest"}>오래된 순</option>
+          <option value="latest">최신순</option>
+          <option value="oldest">오래된 순</option>
         </select>
         <Button
-          text={"새 일기 쓰기"}
-          type={"POSITIVE"}
+          text="새 일기 쓰기"
+          type="POSITIVE"
           onClick={() => nav("/new")}
         />
       </div>

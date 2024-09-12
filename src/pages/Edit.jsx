@@ -35,10 +35,10 @@ const Edit = () => {
   return (
     <div>
       <Header
-        title={"일기 수정하기"}
-        leftChild={<Button text={"< 뒤로가기"} onClick={() => nav(-1)} />}
+        title="일기 수정하기"
+        leftChild={<Button text="< 뒤로가기" onClick={() => nav(-1)} />}
         rightChild={
-          <Button text={"삭제하기"} type={"NEGATIVE"} onClick={onClickDelete} />
+          <Button text="삭제하기" type="NEGATIVE" onClick={onClickDelete} />
         }
       />
       <Editor initData={curDiaryItem} onSubmit={onSubmit} />
